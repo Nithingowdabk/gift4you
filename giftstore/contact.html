@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Gift4You - Get in touch with us for any queries or support.">
+    <title>Contact Us - Gift4You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <!-- Contact Info Cards -->
+            <div class="contact-info-cards" style="grid-template-columns:repeat(4,1fr);margin-bottom:50px;">
+                <div class="contact-info-card fade-in">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h5>Our Address</h5>
+                    <p>123 Gift Lane, Mumbai, Maharashtra 400001</p>
+                </div>
+                <div class="contact-info-card fade-in">
+                    <i class="fas fa-phone"></i>
+                    <h5>Phone</h5>
+                    <p>+91 98765 43210<br>+91 98765 43211</p>
+                </div>
+                <div class="contact-info-card fade-in">
+                    <i class="fas fa-envelope"></i>
+                    <h5>Email</h5>
+                    <p>hello@gift4you.com<br>support@gift4you.com</p>
+                </div>
+                <div class="contact-info-card fade-in">
+                    <i class="fas fa-clock"></i>
+                    <h5>Working Hours</h5>
+                    <p>Mon - Sat: 10AM - 8PM<br>Sunday: Closed</p>
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form fade-in">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Your Name *</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Your Email *</label>
+                                <input type="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject *</label>
+                            <input type="text" placeholder="How can we help?" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Phone</label>
+                            <input type="tel" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label>Your Message *</label>
+                            <textarea rows="5" placeholder="Write your message here..." required style="width:100%;padding:13px 18px;border:1px solid var(--gray-lighter);border-radius:var(--radius-sm);resize:vertical;font-family:var(--font-body);"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Map -->
+                <div class="contact-map fade-in">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.14571805635!2d72.71637198448672!3d19.08219783930783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1709712345678!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;min-height:500px;border-radius:var(--radius);" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Gift4You Store Location">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <h3><i class="fas fa-gift"></i> Gift4You</h3>
+                    <p>Your one-stop destination for premium gifts.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="shop.html?category=wooden-gifts">Wooden Gifts</a></li>
+                        <li><a href="shop.html?category=mobile-photo-frames">Mobile Photo Frames</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> hello@gift4you.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gift4You. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

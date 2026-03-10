@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View product details, gallery, reviews and add to cart.">
+    <title>Product Details - Gift4You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Product Details</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="shop.html">Shop</a>
+                <i class="fas fa-chevron-right"></i>
+                <span id="breadcrumbProduct">Product</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-grid">
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img id="mainImage" src="https://images.unsplash.com/photo-1549465220-1a8b9238f939?w=800" alt="Product Image">
+                    </div>
+                    <div class="product-thumbs" id="productThumbs">
+                        <div class="thumb active" onclick="changeImage(this)">
+                            <img src="https://images.unsplash.com/photo-1549465220-1a8b9238f939?w=200" alt="Thumb 1">
+                        </div>
+                        <div class="thumb" onclick="changeImage(this)">
+                            <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=200" alt="Thumb 2">
+                        </div>
+                        <div class="thumb" onclick="changeImage(this)">
+                            <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=200" alt="Thumb 3">
+                        </div>
+                        <div class="thumb" onclick="changeImage(this)">
+                            <img src="https://images.unsplash.com/photo-1602607616969-5f7849fba9c2?w=200" alt="Thumb 4">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-detail-info">
+                    <p class="product-category" id="detailCategory">Wooden Gifts</p>
+                    <h1 id="detailName">Premium Gift Hamper</h1>
+                    <div class="product-rating">
+                        <div class="stars" id="detailStars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span id="detailReviews">(128 reviews)</span>
+                    </div>
+                    <div class="price-box">
+                        <span class="current-price" id="detailPrice">₹1,999</span>
+                        <span class="old-price" id="detailOldPrice">₹2,499</span>
+                        <span class="discount" id="detailDiscount">20% OFF</span>
+                    </div>
+                    <p class="product-description" id="detailDesc">
+                        A luxurious gift hamper filled with premium chocolates, dry fruits, and aromatic candles. Perfect for any special occasion. Makes a wonderful present for birthdays, anniversaries, or corporate gifting.
+                    </p>
+                    <div class="quantity-selector">
+                        <label>Quantity:</label>
+                        <div class="qty-control">
+                            <button type="button" id="qtyMinus">-</button>
+                            <input type="number" value="1" min="1" id="productQty" readonly>
+                            <button type="button" id="qtyPlus">+</button>
+                        </div>
+                        <span style="font-size:0.85rem;color:var(--gray-light);margin-left:10px;" id="stockInfo">In Stock</span>
+                    </div>
+                    <div class="detail-buttons">
+                        <button class="btn btn-primary btn-lg" id="addToCartBtn">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                        <button class="btn btn-dark btn-lg" id="buyNowBtn">
+                            <i class="fas fa-bolt"></i> Buy Now
+                        </button>
+                    </div>
+                    <a href="#" class="whatsapp-btn" id="whatsappBtn" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                    <div class="product-meta">
+                        <p><strong>SKU:</strong> <span id="detailSku">GFT-001</span></p>
+                        <p><strong>Category:</strong> <span id="detailMetaCat">Wooden Gifts</span></p>
+                        <p><strong>Tags:</strong> Premium, Gift, Hamper, Birthday</p>
+                        <p><strong>Share:</strong>
+                            <a href="#" style="margin-left:10px;color:var(--gray);"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" style="margin-left:8px;color:var(--gray);"><i class="fab fa-twitter"></i></a>
+                            <a href="#" style="margin-left:8px;color:var(--gray);"><i class="fab fa-pinterest-p"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Customer Reviews</h2>
+            </div>
+            <div class="reviews-list" id="reviewsList">
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <img src="https://i.pravatar.cc/100?img=10" alt="Reviewer">
+                            <div>
+                                <h5>Meera Singh</h5>
+                                <span>March 5, 2026</span>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>Absolutely gorgeous gift hamper! The quality of everything inside was top-notch. The packaging was so elegant. My friend loved it!</p>
+                </div>
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <img src="https://i.pravatar.cc/100?img=12" alt="Reviewer">
+                            <div>
+                                <h5>Vikram Patel</h5>
+                                <span>February 28, 2026</span>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <p>Great value for money. The chocolates were delicious and the candles smell amazing. Delivery was on time. Would recommend.</p>
+                </div>
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <img src="https://i.pravatar.cc/100?img=15" alt="Reviewer">
+                            <div>
+                                <h5>Sneha Reddy</h5>
+                                <span>February 15, 2026</span>
+                            </div>
+                        </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p>Perfect birthday gift! The presentation was beautiful and everything was neatly arranged inside the hamper. 10/10 would buy again.</p>
+                </div>
+            </div>
+
+            <div class="review-form">
+                <h3>Write a Review</h3>
+                <form id="reviewForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Email</label>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Rating</label>
+                        <select required style="width:100%;padding:13px 18px;border:1px solid var(--gray-lighter);border-radius:var(--radius-sm);">
+                            <option value="">Select Rating</option>
+                            <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                            <option value="4">⭐⭐⭐⭐ - Very Good</option>
+                            <option value="3">⭐⭐⭐ - Good</option>
+                            <option value="2">⭐⭐ - Average</option>
+                            <option value="1">⭐ - Poor</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Review</label>
+                        <textarea rows="4" placeholder="Write your review here..." required style="width:100%;padding:13px 18px;border:1px solid var(--gray-lighter);border-radius:var(--radius-sm);resize:vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Review <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <h3><i class="fas fa-gift"></i> Gift4You</h3>
+                    <p>Your one-stop destination for premium gifts.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="shop.html?category=wooden-gifts">Wooden Gifts</a></li>
+                        <li><a href="shop.html?category=mobile-photo-frames">Mobile Photo Frames</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> hello@gift4you.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gift4You. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/script.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

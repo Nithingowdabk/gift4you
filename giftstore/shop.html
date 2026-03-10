@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our collection of premium gifts. Filter by category, price and find the perfect gift.">
+    <title>Shop - Gift4You Premium Gift Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Gift Collection</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Shop</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section class="shop-section">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- Sidebar -->
+                <aside class="shop-sidebar">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search gifts..." id="searchInput" autocomplete="off">
+                        <button type="button" id="searchBtn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Categories</h4>
+                        <label><input type="checkbox" value="all" checked class="cat-filter"> All Categories</label>
+                        <label><input type="checkbox" value="1" class="cat-filter"> Wooden Gifts</label>
+                        <label><input type="checkbox" value="2" class="cat-filter"> Mobile Photo Frames</label>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <div class="price-range">
+                            <input type="number" placeholder="Min" id="priceMin" min="0">
+                            <span>-</span>
+                            <input type="number" placeholder="Max" id="priceMax" min="0">
+                        </div>
+                        <button class="btn btn-sm btn-primary mt-20" id="applyPriceFilter" style="width:100%;">Apply Filter</button>
+                    </div>
+                </aside>
+
+                <!-- Products Area -->
+                <div class="shop-main">
+                    <div class="shop-toolbar">
+                        <span class="results-count" id="resultsCount">Showing 12 products</span>
+                        <select id="sortSelect">
+                            <option value="default">Sort by: Default</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                            <option value="name">Name: A to Z</option>
+                        </select>
+                    </div>
+                    <div class="products-grid" id="shopProducts">
+                        <!-- Products loaded via JS -->
+                    </div>
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <h3><i class="fas fa-gift"></i> Gift4You</h3>
+                    <p>Your one-stop destination for premium gifts. We believe in making every celebration special with unique, high-quality gifts.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="shop.html?category=wooden-gifts">Wooden Gifts</a></li>
+                        <li><a href="shop.html?category=mobile-photo-frames">Mobile Photo Frames</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Gift Lane, Mumbai, MH 400001</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> hello@gift4you.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gift4You. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Quick View Modal -->
+    <div class="modal-overlay" id="quickViewModal">
+        <div class="modal">
+            <div class="modal-close" id="closeQuickView"><i class="fas fa-times"></i></div>
+            <div class="quick-view-grid">
+                <div class="quick-view-image">
+                    <img id="qvImage" src="" alt="Product">
+                </div>
+                <div class="quick-view-info">
+                    <p class="product-category" id="qvCategory"></p>
+                    <h3 id="qvName"></h3>
+                    <div class="product-rating">
+                        <div class="stars" id="qvStars"></div>
+                        <span id="qvReviews"></span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current" id="qvPrice"></span>
+                        <span class="original" id="qvOldPrice"></span>
+                    </div>
+                    <p class="product-description" id="qvDesc"></p>
+                    <div class="quantity-selector">
+                        <label>Qty:</label>
+                        <div class="qty-control">
+                            <button type="button" onclick="updateQVQty(-1)">-</button>
+                            <input type="number" value="1" min="1" id="qvQty" readonly>
+                            <button type="button" onclick="updateQVQty(1)">+</button>
+                        </div>
+                    </div>
+                    <div class="detail-buttons">
+                        <button class="btn btn-primary" onclick="addToCartFromQV()">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                        <a href="#" class="btn btn-outline" id="qvViewLink">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

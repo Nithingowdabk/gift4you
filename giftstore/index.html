@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gift4You - Premium gift store. Find unique wooden gifts and mobile photo frames for every occasion.">
+    <meta name="keywords" content="gifts, wooden gifts, mobile photo frames, photo frames, wooden crafts, online gift store">
+    <title>Gift4You - Premium Gifts for Every Occasion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo"><i class="fas fa-gift"></i> Gift<span>4You</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i><span class="cart-count" id="cartCount">0</span></a>
+                <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(135deg, rgba(42, 37, 22,1), rgba(48, 43, 25, 0.8)), url('images/home.png') center/cover no-repeat;">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    New Collection 2026
+                </div>
+                <h1>Premium Gifts for <span>Every Occasion</span></h1>
+                <p>Discover handpicked, beautifully crafted gifts that make every moment special. From birthdays to anniversaries, find the perfect present for your loved ones.</p>
+                <div class="hero-buttons">
+                    <a href="shop.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-shopping-bag"></i> Shop Now
+                    </a>
+                    <a href="#categories" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.6);color:#fff;">
+                        <i class="fas fa-th-large"></i> Explore Categories
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <h3>10K+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3>500+</h3>
+                        <p>Premium Products</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3>50+</h3>
+                        <p>Gift Categories</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Shop by Category</h2>
+                <p>Find the perfect gift from our curated collections</p>
+            </div>
+            <div class="categories-grid">
+                <a href="shop.html?category=wooden-gifts" class="category-card fade-in">
+                    <div class="cat-icon">
+                        <img src="images/wooden.png" alt="Wooden Gifts" loading="lazy">
+                    </div>
+                    <h4>Wooden Gifts</h4>
+                </a>
+                <a href="shop.html?category=mobile-photo-frames" class="category-card fade-in">
+                    <div class="cat-icon">
+                        <img src="images/frame.png" alt="Mobile Photo Frames" loading="lazy">
+                    </div>
+                    <h4>Mobile Photo Frames</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Selling Products -->
+    <section class="products-section" id="bestsellers">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Best Selling Gifts</h2>
+                <p>Our most loved products chosen by thousands of happy customers</p>
+            </div>
+            <div class="products-grid">
+                <div style="grid-column:1/-1;text-align:center;padding:40px 20px;">
+                    <h4>No products available right now</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Banner -->
+    <section class="offers-banner fade-in">
+        <div class="container">
+            <div class="offers-content">
+                <div class="offers-text">
+                    <span class="badge">Limited Time Offer</span>
+                    <h2>Up to <span>50% Off</span> on Wooden Gifts & Photo Frames</h2>
+                    <p>Don't miss our biggest sale of the season. Premium wooden gifts and mobile photo frames at unbeatable prices. Hurry, offer ends soon!</p>
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-item">
+                            <span class="number" id="days">00</span>
+                            <span class="label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="hours">00</span>
+                            <span class="label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="minutes">00</span>
+                            <span class="label">Mins</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="seconds">00</span>
+                            <span class="label">Secs</span>
+                        </div>
+                    </div>
+                    <a href="shop.html" class="btn btn-accent btn-lg">Shop the Sale <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="offers-image">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a8b9238f939?w=600" alt="Special Offer" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Why Choose Us</h2>
+                <p>We make gifting effortless and memorable</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card fade-in">
+                    <div class="icon"><i class="fas fa-gift"></i></div>
+                    <h4>Premium Quality</h4>
+                    <p>Every product is handpicked and quality checked to ensure the best gifting experience.</p>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="icon"><i class="fas fa-truck-fast"></i></div>
+                    <h4>Fast Delivery</h4>
+                    <p>Free express delivery on orders above ₹999. Same day delivery available in select cities.</p>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="icon"><i class="fas fa-box-open"></i></div>
+                    <h4>Gift Wrapping</h4>
+                    <p>Beautiful complementary gift wrapping with a personalized message card included.</p>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="icon"><i class="fas fa-shield-halved"></i></div>
+                    <h4>Secure Payment</h4>
+                    <p>100% secure payment gateway. Multiple payment options including COD available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>What Our Customers Say</h2>
+                <p>Real reviews from real customers</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Absolutely loved the gift hamper I ordered for my mom's birthday. The packaging was premium and the quality exceeded my expectations. Will definitely order again!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/100?img=1" alt="Priya Sharma">
+                        <div>
+                            <h5>Priya Sharma</h5>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"The personalized photo frame was exactly what I wanted. Amazing craftsmanship and super fast delivery. My wife was thrilled with the anniversary surprise!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/100?img=3" alt="Rahul Verma">
+                        <div>
+                            <h5>Rahul Verma</h5>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"Best online gift store I've found! The luxury chocolate box was beautifully packaged. Customer service was excellent too. Highly recommended for anyone looking for premium gifts."</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/100?img=5" alt="Ananya Patel">
+                        <div>
+                            <h5>Ananya Patel</h5>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Gallery -->
+    <section class="instagram">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Follow Us on Instagram</h2>
+                <p>@gift4you - Share your gifting moments with us</p>
+            </div>
+            <div class="insta-grid">
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a8b9238f939?w=300" alt="Instagram post" loading="lazy">
+                    <div class="overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=300" alt="Instagram post" loading="lazy">
+                    <div class="overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=300" alt="Instagram post" loading="lazy">
+                    <div class="overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1602607616969-5f7849fba9c2?w=300" alt="Instagram post" loading="lazy">
+                    <div class="overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=300" alt="Instagram post" loading="lazy">
+                    <div class="overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="insta-item">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=300" alt="Instagram post" loading="lazy">
+                    <div class="overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content fade-in">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter and get 10% off your first order plus exclusive deals.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <h3><i class="fas fa-gift"></i> Gift4You</h3>
+                    <p>Your one-stop destination for premium gifts. We believe in making every celebration special with unique, high-quality gifts that create lasting memories.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="shop.html?category=wooden-gifts">Wooden Gifts</a></li>
+                        <li><a href="shop.html?category=mobile-photo-frames">Mobile Photo Frames</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Gift Lane, Mumbai, Maharashtra 400001</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> hello@gift4you.com</li>
+                        <li><i class="fas fa-clock"></i> Mon - Sat: 10AM - 8PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gift4You. All rights reserved. Made with <i class="fas fa-heart" style="color:var(--primary)"></i> in India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Quick View Modal -->
+    <div class="modal-overlay" id="quickViewModal">
+        <div class="modal">
+            <div class="modal-close" id="closeQuickView"><i class="fas fa-times"></i></div>
+            <div class="quick-view-grid">
+                <div class="quick-view-image">
+                    <img id="qvImage" src="" alt="Product">
+                </div>
+                <div class="quick-view-info">
+                    <p class="product-category" id="qvCategory"></p>
+                    <h3 id="qvName"></h3>
+                    <div class="product-rating">
+                        <div class="stars" id="qvStars"></div>
+                        <span id="qvReviews"></span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current" id="qvPrice"></span>
+                        <span class="original" id="qvOldPrice"></span>
+                    </div>
+                    <p class="product-description" id="qvDesc"></p>
+                    <div class="quantity-selector">
+                        <label>Qty:</label>
+                        <div class="qty-control">
+                            <button type="button" onclick="updateQVQty(-1)">-</button>
+                            <input type="number" value="1" min="1" id="qvQty" readonly>
+                            <button type="button" onclick="updateQVQty(1)">+</button>
+                        </div>
+                    </div>
+                    <div class="detail-buttons">
+                        <button class="btn btn-primary" onclick="addToCartFromQV()">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                        <a href="#" class="btn btn-outline" id="qvViewLink">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
