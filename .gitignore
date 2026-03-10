@@ -1,0 +1,10 @@
+# Ignore backend and database while developing frontend
+/giftstore/backend/
+/giftstore/admin/
+/giftstore/database.sql
+# Ignore any SQL dumps
+*.sql
+# Node modules / env
+node_modules/
+.env
+.DS_Store
